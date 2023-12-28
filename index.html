@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>2D game</title>
+</head>
+<body class="body" onkeyup="keyCheck(event);">
+    <div class="background" id="background">
+
+        <div class="gameStart" id="gameStart">
+            <img src="./player_start.gif" alt="player_start" class="player_start" />
+            <div>The Shadow Dog</div>
+            <input type="text" id="input-field" placeholder="Enter player name">
+
+            <button id="nameSubmitBtn">&#10003;</button>
+
+            <button class="button" id="startB" onclick="begin();">START</button>
+            <button class="howbtn" onclick="help();">HOW TO PLAY</button>
+        </div>
+
+        <div id="displayName"></div>
+
+
+        <div class="gameOver" id="gameOver">
+            <div>Oops..</div>
+            <img src="./dead.gif" alt="dead" class="player_faild" />
+            <div>GAME OVER</div>
+            <div id="over-player-name"></div>
+            <div id="endScore">press Enter</div>
+
+            <button class="overbtn" onclick="re();">MAIN MENU</button>
+        </div>
+
+        <div  class="soundImg">
+            <img src="./mute.png" alt="speaker ico" id="soundImg" />
+            
+        </div>
+        <div class="reset">
+            <img src="./stop.png" alt="reset" class="resetImg" id="resetImg" onclick="re();" />
+        </div>
+
+        <audio id="backgroundMusic">
+            <source src="./background.mp3" type="audio/mp3" />
+        </audio>
+
+
+
+        
+        <img src="./sky.png" alt="sky" class="sky" id="sky" />
+        <div class="score" id="score">0</div>
+        <img src="./player_start.gif" alt="player" class="player" id="player" />
+        <img src="./road.png" class="road" id="road" />
+    </div>
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

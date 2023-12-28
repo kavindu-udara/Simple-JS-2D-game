@@ -1,0 +1,210 @@
+.body{
+    margin: 0%;
+    overflow: hidden;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./background.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+.player{
+    margin-left: 20px;
+    position: absolute;
+    height: 150px;
+    margin-top: 665px;
+    z-index: 1;
+}
+.raven{
+    height: 50px;
+    margin-left: 100px;
+    margin-top: 190px;
+    position: absolute;
+}
+.score{
+    position: absolute;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 820px;
+    z-index: 1;
+    color: aliceblue;
+}
+.road{
+    background-image: url("./road.png");
+    width: 100vw;
+    margin-top: 510px;
+    position: absolute;
+}
+.block{
+    width: 50px;
+    height: 50px;
+    background-image: url("./enemy_block.png");
+    background-size: cover;
+    position: absolute;
+    margin-top: 690px;
+    z-index: 0;
+}
+
+.enemy{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    margin-top: 750px;
+    margin-left: 200px;
+    background-image: url("./enemy.gif");
+}
+
+.bird{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 100px;
+    background-image: url("./raven.gif");
+    background-repeat: repeat-x;
+    float: right;
+
+    
+  position: absolute;
+  left: 0;
+  animation-name: move;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+.sky{
+    background: url(./sky.png);
+    width: 100vw;
+    z-index: 2;
+    position: absolute;
+    background-repeat: repeat-x;
+}
+
+.gameStart, .gameOver{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(86, 86, 86, 0.5);
+  backdrop-filter: blur(10px);
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  z-index: 3;
+
+}
+.gameStart{
+  visibility: visible;
+}
+.gameOver{
+  font-size: 40px;
+  visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.player_start{
+  width: 20vw;
+  height: 20vh;
+}
+.player_faild{
+  width: 20vw;
+  height: 20vh;
+}
+
+button{
+  width: 20vw;
+  height: 5vh;
+  background-color: rgba(86, 86, 86, 0.5);
+  border-style: none;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#startB:hover, .overbtn:hover, #nameSubmitBtn:hover{
+  border: 3px solid black;
+}
+#startB{
+  margin-top: 30px;
+}
+.howbtn{
+  margin-top: 10px;
+  font-size: 10px;
+  background: none;
+  color: rgba(250, 235, 215, 0.521);
+}
+.overbtn{
+  margin-top: 10px;
+}
+
+.soundImg img{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 4;
+  margin-top: 835px;
+  margin-left: 1200px;
+}
+
+#input-field{
+  width: 20vw;
+  height: 5vh;
+  background-color: rgba(86, 86, 86, 1);
+  border-style: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 10px;
+  color: antiquewhite;
+  text-align: center;
+}
+
+#displayName{
+  position: absolute;
+  color: rgba(86, 86, 86, 0.9);
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 10px;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+#nameSubmitBtn{
+  position: absolute;
+  width: 70px;
+  margin-left: 25pc;
+  margin-top: 130px;
+}
+
+.resetImg{
+  position: absolute;
+  width: 50px;
+  margin-top: 835px;
+  margin-left: 1150px;
+  z-index: 2;
+}
